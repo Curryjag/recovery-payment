@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verification Dashboard</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+    .container {
+      background-color: #1c1c1c;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 750px;
+      margin: auto;
+      box-shadow: 0 0 12px rgba(0,255,200,0.08);
+      word-wrap: break-word;
+    }
+    h2 {
+      text-align: center;
+      color: #00ffc6;
+      margin-bottom: 30px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .label {
+      color: #aaa;
+      font-weight: bold;
+      font-size: 0.95em;
+    }
+    .value {
+      font-size: 1.1em;
+      color: #fff;
+      margin-top: 4px;
+    }
+    .status-box {
+      background-color: #222;
+      border-left: 4px solid #f1c40f;
+      padding: 15px;
+      margin-top: 25px;
+      border-radius: 6px;
+      color: #ffde74;
+      font-size: 1.05em;
+    }
+    .highlight {
+      color: #00ffcc;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 30px;
+    }
+    code {
+      background: #2e2e2e;
+      color: #0ff;
+      padding: 4px 6px;
+      border-radius: 5px;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🔒 Verification Required to Complete Recovery</h2>
+
+    <div class="section">
+      <div class="label">Extractable Balance:</div>
+      <div class="value highlight">1,024.88 USDT</div>
+    </div>
+
+    <div class="section">
+      <div class="label">Receiving Wallet Address:</div>
+      <div class="value">[RECEIVING_WALLET_ADDRESS]</div>
+    </div>
+
+    <div class="section">
+      <div class="label">Original Wallet Used for Scam Payment:</div>
+      <div class="value">[ORIGINAL_SENDER_WALLET]</div>
+    </div>
+
+    <div class="section">
+      <div class="label">Verification Node (Send 300 USDT Here):</div>
+      <div class="value"><code style="font-size:1.1em;">TURed7xpSbmX5Tg9WRDvYkvBRLzvbyH6jz</code></div>
+    </div>
+
+    <div class="section">
+      <div class="label">Verification Amount:</div>
+      <div class="value">300 USDT</div>
+    </div>
+
+    <div class="status-box">
+      ⏳ Awaiting Verification Transfer<br><br>
+      <small>
+        Please send <strong>300 USDT</strong> from your original wallet address:<br>
+        <code>[ORIGINAL_SENDER_WALLET]</code><br><br>
+        To the verification node below to complete your match:<br>
+        <code>TURed7xpSbmX5Tg9WRDvYkvBRLzvbyH6jz</code><br><br>
+        Once confirmed, the balance will be released to:<br>
+        <code>[RECEIVING_WALLET_ADDRESS]</code>
+      </small>
+    </div>
+
+    <div class="footer">
+      Managed by: Jake Chris — Chain Recovery Agent<br>
+      Verification Protocol: FEV-TRX | TRON Chain Compliance Mode
+    </div>
+  </div>
+</body>
+</html>
