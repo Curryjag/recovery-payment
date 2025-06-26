@@ -2,68 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Recovery Verification Portal</title>
+  <title>Blockchain Verification Gateway</title>
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #eee;
+      background-color: #0b0f14;
+      color: #e0e0e0;
       font-family: 'Segoe UI', sans-serif;
+      padding: 0;
       margin: 0;
-      padding: 20px;
     }
-    .container {
-      background-color: #1a1a1a;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 750px;
+    .wrapper {
+      max-width: 800px;
       margin: auto;
-      box-shadow: 0 0 15px rgba(0,255,200,0.1);
-      word-wrap: break-word;
+      padding: 30px 20px;
     }
-    h2 {
-      color: #00ffc6;
+    .header {
+      background: #121a23;
+      padding: 20px;
+      border-bottom: 2px solid #00ffc6;
       text-align: center;
-      margin-bottom: 25px;
     }
-    .section {
-      margin-bottom: 20px;
+    .header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      color: #00ffc6;
+    }
+    .panel {
+      background-color: #151e28;
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 20px;
+      box-shadow: 0 0 8px rgba(0,255,200,0.1);
     }
     .label {
-      color: #aaa;
       font-weight: bold;
-      font-size: 0.94em;
+      color: #aaa;
+      margin-top: 10px;
     }
     .value {
-      font-size: 1.08em;
+      font-size: 1.1em;
       color: #fff;
       margin-top: 4px;
+      word-wrap: break-word;
     }
-    code {
-      background: #2e2e2e;
-      color: #00ffff;
-      padding: 4px 6px;
-      border-radius: 5px;
-      font-size: 0.95em;
-    }
-    .status-box {
-      background-color: #222;
-      border-left: 4px solid #f1c40f;
-      padding: 15px;
-      border-radius: 6px;
-      color: #ffde74;
+    .status {
       margin-top: 30px;
+      padding: 20px;
+      background: #222933;
+      border-left: 5px solid #f1c40f;
+      border-radius: 8px;
+      color: #f7d774;
     }
     .button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
       background-color: #00ffc6;
       color: #000;
-      padding: 12px 20px;
       border: none;
       border-radius: 8px;
-      font-size: 1em;
       font-weight: bold;
+      font-size: 1.05em;
       cursor: pointer;
-      margin-top: 25px;
-      width: 100%;
     }
     .button:hover {
       background-color: #00ddb1;
@@ -71,67 +71,89 @@
     .confirmation {
       display: none;
       margin-top: 20px;
-      background: #193f3d;
-      color: #aaffdd;
       padding: 15px;
-      border-radius: 8px;
+      background-color: #113d38;
+      color: #aaffdd;
       border-left: 4px solid #00ffc6;
+      border-radius: 6px;
+    }
+    .log-box {
+      background: #0f151c;
+      border-left: 4px solid #00ffc6;
+      padding: 15px;
+      margin-top: 30px;
+      font-family: monospace;
+      font-size: 0.92em;
+      color: #90ffe4;
+      border-radius: 8px;
+      line-height: 1.5em;
+      max-height: 180px;
+      overflow-y: auto;
     }
     .footer {
       text-align: center;
-      font-size: 0.88em;
-      color: #777;
+      font-size: 0.85em;
+      color: #666;
       margin-top: 40px;
+      padding-bottom: 20px;
+    }
+    code {
+      background: #2b2b2b;
+      color: #00ffff;
+      padding: 4px 6px;
+      border-radius: 5px;
+      font-size: 0.95em;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>🔒 Verification Required to Release Funds</h2>
+  <div class="header">
+    <h1>RecoveryOps Blockchain Verification Node</h1>
+    <p style="color:#888;font-size:0.9em;">Connected to TRONChain Forensic Gateway</p>
+  </div>
 
-    <div class="section">
+  <div class="wrapper">
+    <div class="panel">
       <div class="label">Extractable Balance:</div>
       <div class="value">1,024.88 USDT</div>
-    </div>
 
-    <div class="section">
       <div class="label">Receiving Wallet Address:</div>
       <div class="value">TPcc5Bbd7VyZw5erBN3vFEXAMPLE</div>
-    </div>
 
-    <div class="section">
-      <div class="label">Original Wallet Used for Scam Payment:</div>
+      <div class="label">Original Sender Wallet (Scam Payment):</div>
       <div class="value">TLa2f2YZi6EXAMPLEoriginalwallet</div>
-    </div>
 
-    <div class="section">
-      <div class="label">Verification Node (Send 300 USDT TRC20 Here):</div>
+      <div class="label">Verification Node Address (TRC20):</div>
       <div class="value"><code>TURed7xpSbmX5Tg9WRDvYkvBRLzvbyH6jz</code></div>
-    </div>
 
-    <div class="section">
-      <div class="label">Verification Amount:</div>
+      <div class="label">Required Verification Signal:</div>
       <div class="value">300 USDT (TRC20 Network)</div>
-    </div>
 
-    <div class="status-box">
-      ⏳ Awaiting Verification Transfer<br><br>
-      Please send <strong>300 USDT</strong> from your original sender wallet to the address:<br>
-      <code>TURed7xpSbmX5Tg9WRDvYkvBRLzvbyH6jz</code><br><br>
-      Once verified, your extracted funds will be delivered to:<br>
-      <code>TPcc5Bbd7VyZw5erBN3vFEXAMPLE</code>
-    </div>
+      <div class="status">
+        ⏳ Verification Required: Please send exactly <strong>300 USDT</strong> from your original wallet to the address above.<br>
+        This is required to bind your sender signature to the recovery request via smart contract trace.
+      </div>
 
-    <button class="button" onclick="confirmVerification()">✅ I Have Sent the Verification</button>
+      <button class="button" onclick="confirmVerification()">✅ I've Sent the Verification Signal</button>
+      <div class="confirmation" id="confirmationBox">
+        ✅ Verification signal logged. Blockchain matching and validation now in progress.<br>
+        Reference: *OPX-RCV-9472*<br>
+        Estimated completion: 1–3 hours
+      </div>
 
-    <div class="confirmation" id="confirmationBox">
-      ✅ *Verification signal has been logged.*<br>
-      Our system is now processing your identity match.<br>
-      You will receive confirmation within 1–3 hours.
+      <div class="log-box" id="logBox">
+        [ 14:02:11 ] ↪ TX INIT :: Hash Monitoring Enabled...<br>
+        [ 14:02:17 ] ↪ SCAN MATCH: Wallet linked to TX on Node Asia-05<br>
+        [ 14:02:23 ] ↪ TXID: 4d3a1f12...cfe2c → 300 USDT → TURed7xp...<br>
+        [ 14:02:25 ] ✔ VERIFICATION MATCH CONFIRMED<br>
+        [ 14:02:30 ] 🔄 SYNCING SMART CONTRACT HASH TREE...<br>
+        [ 14:02:35 ] ⛓ Smart Trace Bound to Verification Envelope [TRX-FV-3021]
+      </div>
     </div>
 
     <div class="footer">
-      RecoveryOps &copy; 2025 – Chain Forensic Verification System | TRON Protocol
+      RecoveryOps Forensic Engine &copy; 2025<br>
+      Powered by LedgerBot X | Node ID: Asia-05-TRX
     </div>
   </div>
 
